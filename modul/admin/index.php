@@ -24,40 +24,41 @@
                 Amin
             </div>
             <div class="card-body">
-                <table class="table">
+                <a href="?page=modul/admin/tambah" class="btn btn-primary my-4">
+                    Tambah Data
+                </a>
+                <table class="table" id="example1">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">No</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Foto</th>
+                            <th scope="col">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        <?php
+                        $ambil = $koneksi->query("SELECT * FROM tb_admin");
+                        foreach ($ambil as $a => $pecah) {
+                        ?>
+
+                            <tr>
+                                <td><?php echo $a + 1 ?></td>
+                                <td><?php echo $pecah['admin_nama'] ?></td>
+                                <td><?php echo $pecah['admin_email'] ?></td>
+                                <td>
+                                    <img src="img/admin/<?php echo $pecah['admin_foto'] ?>" alt="" style="width: 100px;">
+                                </td>
+                                <td>
+                                    <a href="index.php?page=modul/admin/edit&id=<?= $pecah['admin_id'] ?>" class="btn btn-warning">Edit</a>
+                                    <a href="index.php?page=modul/admin/hapus&id=<?= $pecah['admin_id'] ?>" class="btn btn-danger">Hapus</a>
+                                </td>
+                            </tr>
+                        <?php
+
+                        }
+                        ?>
                     </tbody>
                 </table>
 
