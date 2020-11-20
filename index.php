@@ -1,4 +1,5 @@
 <?php
+include "component/koneksi.php";
 include "component/header.php";
 ?>
 
