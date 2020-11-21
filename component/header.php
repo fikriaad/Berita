@@ -34,6 +34,7 @@
 
 
 <body class="hold-transition sidebar-mini layout-fixed">
+    <script src="assets/ckeditor/ckeditor.js"> </script>
     <div class="wrapper">
 
         <!-- Navbar -->

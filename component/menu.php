@@ -24,7 +24,7 @@
                with font-awesome or any other icon font library -->
                 <li class="nav-item">
                     <a href="index.php" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dasboard
                         </p>
@@ -32,7 +32,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="?page=modul/admin/index" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fas fa-pencil-alt"></i>
                         <p>
                             Data Admin
                         </p>
@@ -40,9 +40,17 @@
                 </li>
                 <li class="nav-item">
                     <a href="?page=modul/kategori/index" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fas fa-edit"></i>
                         <p>
                             Data Kategori
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="?page=modul/berita/index" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Data Berita
                         </p>
                     </a>
                 </li>
